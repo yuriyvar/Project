@@ -26,7 +26,7 @@ tr.total td{font-weight:bold;border-top:2px solid #1F4E79;background:#f0f4f8}
 <p class="note">Источник — файл «Работы B&B 2025 - расчёт.xlsx», 327 строк работ. Сумма = цена × мультипликатор × объём.
 <b>База</b> — мультипликаторы как в таблице (покраска в основном ×2, в 8 строках ×1). <b>Покраска ×3</b> — все строки покраски стен, потолков и откосов с мультипликатором 3; покраска балок оставлена ×2 (голубые строки — покраска).
 Одинаковые работы внутри помещения объединены в одну строку, объёмы просуммированы; «(N стр.)» — сколько строк слито, наведите курсор — исходные строки и объёмы.
-Жёлтые строки — сумма задана вручную за всю работу, а не через объём. В итог не входят 8 строк «НЕ СДЕЛАНО» (список в конце).</p>
+Сравнение мультипликаторов покраски ×2 / ×2,5 / ×3 — в разделе <a href='#paint'>«Покраска: сценарии»</a>. Жёлтые строки — сумма задана вручную за всю работу, а не через объём. В итог не входят 8 строк «НЕ СДЕЛАНО» (список в конце).</p>
 <h2>По помещениям</h2><div class="wrap"><table><tr><th>Помещение</th><th class="n">База, $</th><th class="n">Покраска ×3, $</th><th class="n">Разница, $</th></tr>
 <tr><td><a href='#r0'>Анин гардероб</a></td><td class='n'>340.92</td><td class='n b'>366.18</td><td class='n'>25.26</td></tr>
 <tr><td><a href='#r1'>Анина ванная</a></td><td class='n'>5.24</td><td class='n b'>5.24</td><td class='n'></td></tr>
@@ -90,6 +90,64 @@ tr.total td{font-weight:bold;border-top:2px solid #1F4E79;background:#f0f4f8}
 <tr><td><a href='#c18'>Прочее</a></td><td class='n'>7</td><td class='n'>5.73 м² + 8 шт. + 20 швов</td><td class='n'>347.30</td><td class='n b'>347.30</td><td class='n'>3.4</td></tr>
 <tr class="total"><td>ИТОГО</td><td class="n">327</td><td></td><td class="n">9,457.91</td><td class="n">10,298.18</td><td class="n">100.0</td></tr></table></div>
 <p class="note">Объём — сумма по строкам без учёта мультипликатора (слоёв). Единицы взяты из строк работ: часть шпатлёвки и выравнивания швов считается в м.п. по цене за м² — как штучная работа.</p>
+<h2 id="paint">Покраска: сценарии мультипликатора</h2>
+<p class="note">Цена за слой: стены $1/м², потолок и откосы $1.5/м². Меняется только мультипликатор (число слоёв) покраски стен, потолков и откосов; балки во всех сценариях ×2. Остальные работы не меняются. «Как в таблице» — текущие мультипликаторы: в основном ×2, в 8 строках ×1.</p>
+<div class='wrap'><table><tr><th>Вид покраски</th><th class='n'>Строк</th><th class='n'>Объём</th><th class='n'>Цена, $</th><th class='n'>Как в таблице, $</th><th class='n'>×2, $</th><th class='n'>×2.5, $</th><th class='n'>×3, $</th></tr>
+<tr class='paint'><td>Покраска стен</td><td class='n'>25</td><td class='n'>394.57 м²</td><td class='n'>1</td><td class='n'>663.02</td><td class='n b'>789.14</td><td class='n b'>986.43</td><td class='n b'>1,183.71</td></tr>
+<tr class='paint'><td>Покраска потолка</td><td class='n'>16</td><td class='n'>155.07 м²</td><td class='n'>1.5</td><td class='n'>433.44</td><td class='n b'>465.20</td><td class='n b'>581.50</td><td class='n b'>697.80</td></tr>
+<tr class='paint'><td>Покраска потолка</td><td class='n'>1</td><td class='n'>16.46 м.п.</td><td class='n'>1.5</td><td class='n'>49.38</td><td class='n b'>49.38</td><td class='n b'>61.73</td><td class='n b'>74.07</td></tr>
+<tr class='paint'><td>Покраска стен шкафов и балки</td><td class='n'>1</td><td class='n'>21.85 м²</td><td class='n'>1</td><td class='n'>43.70</td><td class='n b'>43.70</td><td class='n b'>54.63</td><td class='n b'>65.55</td></tr>
+<tr class='paint'><td>Покраска откосов</td><td class='n'>1</td><td class='n'>5.78 м²</td><td class='n'>1.5</td><td class='n'>17.32</td><td class='n b'>17.33</td><td class='n b'>21.66</td><td class='n b'>25.99</td></tr>
+<tr class='paint'><td>Покраска балки <span class='cnt'>(всегда ×2)</span></td><td class='n'>4</td><td class='n'>8.47 м²</td><td class='n'>1</td><td class='n'>16.93</td><td class='n b'>16.93</td><td class='n b'>16.93</td><td class='n b'>16.93</td></tr>
+<tr class='total'><td>Покраска, всего</td><td class='n'>48</td><td></td><td></td><td class='n'>1,223.80</td><td class='n'>1,381.69</td><td class='n'>1,722.88</td><td class='n'>2,064.06</td></tr>
+<tr><td>Остальные работы (не меняются)</td><td class='n'>279</td><td></td><td></td><td class='n'>8,234.11</td><td class='n'>8,234.11</td><td class='n'>8,234.11</td><td class='n'>8,234.11</td></tr>
+<tr class='total'><td>ВСЕ РАБОТЫ</td><td class='n'>327</td><td></td><td></td><td class='n'>9,457.91</td><td class='n'>9,615.80</td><td class='n'>9,956.99</td><td class='n'>10,298.18</td></tr>
+<tr><td>Оплачено</td><td></td><td></td><td></td><td class='n'>11,465.88</td><td class='n'>11,465.88</td><td class='n'>11,465.88</td><td class='n'>11,465.88</td></tr>
+<tr class='total'><td>Переплата (оплачено − работы)</td><td></td><td></td><td></td><td class='n'>2,007.97</td><td class='n'>1,850.08</td><td class='n'>1,508.89</td><td class='n'>1,167.70</td></tr>
+<tr><td>Прибавка к варианту «как в таблице»</td><td></td><td></td><td></td><td class='n'>—</td><td class='n'>+157.89</td><td class='n'>+499.08</td><td class='n'>+840.26</td></tr>
+</table></div>
+<p class="note">Каждый дополнительный слой покраски стен, потолков и откосов по всему дому стоит <b>$682.38</b>; полслоя (шаг 0,5) — $341.19. Даже при ×3 оплаченная сумма превышает стоимость работ на $1,167.70.</p>
+<h3>Строки, где в таблице стоит ×1</h3><div class='wrap'><table><tr><th>Помещение</th><th>Работа</th><th class='n'>Объём, м²</th><th class='n'>×1, $</th><th class='n'>×2, $</th><th class='n'>×2.5, $</th><th class='n'>×3, $</th></tr>
+<tr><td>Мастер-спальня</td><td title='стр.27'>Покраска потолка</td><td class='n'>21.17</td><td class='n'>31.76</td><td class='n'>63.52</td><td class='n'>79.41</td><td class='n'>95.29</td></tr>
+<tr><td>Коридор 2 эт - стены</td><td title='стр.147'>Покраска стен (без 4м лестничной стены)</td><td class='n'>41.63</td><td class='n'>41.63</td><td class='n'>83.25</td><td class='n'>104.07</td><td class='n'>124.88</td></tr>
+<tr><td>Стена лестн. 2 эт</td><td title='стр.153'>покраска лестничных стен</td><td class='n'>25.77</td><td class='n'>25.77</td><td class='n'>51.54</td><td class='n'>64.43</td><td class='n'>77.31</td></tr>
+<tr><td>Стена лестн. 2 эт</td><td title='стр.162'>козырёк лестницы, покраска</td><td class='n'>0.52</td><td class='n'>0.52</td><td class='n'>1.04</td><td class='n'>1.30</td><td class='n'>1.56</td></tr>
+<tr><td>Стена лестн. 2 эт</td><td title='стр.164'>Покраска лестничной стены на холст</td><td class='n'>25.77</td><td class='n'>25.77</td><td class='n'>51.54</td><td class='n'>64.43</td><td class='n'>77.31</td></tr>
+<tr><td>Перег. лестн. 2 эт</td><td title='стр.169'>Покраска стен</td><td class='n'>5.04</td><td class='n'>5.04</td><td class='n'>10.07</td><td class='n'>12.59</td><td class='n'>15.11</td></tr>
+<tr><td>Перег. лестн. 2 эт</td><td title='стр.173'>Покраска перегородочной стены на холст</td><td class='n'>5.04</td><td class='n'>5.04</td><td class='n'>10.07</td><td class='n'>12.59</td><td class='n'>15.11</td></tr>
+<tr><td>Прачечная 1эт.</td><td title='стр.286'>Покраска стен 1й слой</td><td class='n'>22.37</td><td class='n'>22.37</td><td class='n'>44.73</td><td class='n'>55.92</td><td class='n'>67.10</td></tr>
+<tr class='total'><td>Итого</td><td></td><td class='n'>147.3</td><td class='n'>157.89</td><td class='n'>315.77</td><td class='n'>394.72</td><td class='n'>473.66</td></tr></table></div>
+<h3>Покраска по помещениям</h3><div class='wrap'><table><tr><th>Помещение</th><th class='n'>Объём</th><th class='n'>Как в таблице, $</th><th class='n'>×2, $</th><th class='n'>×2.5, $</th><th class='n'>×3, $</th></tr>
+<tr><td>Анин гардероб</td><td class='n'>23.03 м²</td><td class='n'>50.53</td><td class='n'>50.53</td><td class='n'>63.16</td><td class='n'>75.79</td></tr>
+<tr><td>Анина спальня</td><td class='n'>27.53 м² + 16.46 м.п.</td><td class='n'>120.97</td><td class='n'>120.97</td><td class='n'>151.21</td><td class='n'>181.46</td></tr>
+<tr><td>Мастер-спальня</td><td class='n'>64.53 м²</td><td class='n'>118.46</td><td class='n'>150.23</td><td class='n'>187.78</td><td class='n'>225.34</td></tr>
+<tr><td>Часовня</td><td class='n'>44.89 м²</td><td class='n'>105.85</td><td class='n'>105.85</td><td class='n'>132.31</td><td class='n'>158.77</td></tr>
+<tr><td>Фойе 2 эт</td><td class='n'>26.61 м²</td><td class='n'>62.27</td><td class='n'>62.27</td><td class='n'>77.84</td><td class='n'>93.41</td></tr>
+<tr><td>Прачечная 2 эт</td><td class='n'>10.99 м²</td><td class='n'>23.29</td><td class='n'>23.29</td><td class='n'>29.11</td><td class='n'>34.94</td></tr>
+<tr><td>Коридор 2 эт - ванная</td><td class='n'>6.59 м²</td><td class='n'>14.70</td><td class='n'>14.70</td><td class='n'>18.37</td><td class='n'>22.05</td></tr>
+<tr><td>Коридор 2 эт - потолок</td><td class='n'>18.58 м²</td><td class='n'>55.75</td><td class='n'>55.75</td><td class='n'>69.69</td><td class='n'>83.63</td></tr>
+<tr><td>Сашина спальня</td><td class='n'>17.57 м²</td><td class='n'>35.14</td><td class='n'>35.14</td><td class='n'>43.93</td><td class='n'>52.71</td></tr>
+<tr><td>Серёжина спальня</td><td class='n'>8.04 м²</td><td class='n'>17.25</td><td class='n'>17.25</td><td class='n'>21.57</td><td class='n'>25.88</td></tr>
+<tr><td>Коридор 2 эт - стены</td><td class='n'>43.32 м²</td><td class='n'>45.01</td><td class='n'>86.63</td><td class='n'>108.29</td><td class='n'>129.95</td></tr>
+<tr><td>Стена лестн. 2 эт</td><td class='n'>52.06 м²</td><td class='n'>52.06</td><td class='n'>104.12</td><td class='n'>130.15</td><td class='n'>156.18</td></tr>
+<tr><td>Перег. лестн. 2 эт</td><td class='n'>10.07 м²</td><td class='n'>10.07</td><td class='n'>20.14</td><td class='n'>25.18</td><td class='n'>30.21</td></tr>
+<tr><td>Зал стены</td><td class='n'>32.9 м²</td><td class='n'>65.79</td><td class='n'>65.79</td><td class='n'>82.24</td><td class='n'>98.69</td></tr>
+<tr><td>Зал потолок</td><td class='n'>24.36 м²</td><td class='n'>73.08</td><td class='n'>73.08</td><td class='n'>91.36</td><td class='n'>109.63</td></tr>
+<tr><td>Зал-балка из узкого коридора</td><td class='n'>2.05 м²</td><td class='n'>4.10</td><td class='n'>4.10</td><td class='n'>4.10</td><td class='n'>4.10</td></tr>
+<tr><td>Широкий коридор 1 этаж</td><td class='n'>26.31 м²</td><td class='n'>61.57</td><td class='n'>61.57</td><td class='n'>76.96</td><td class='n'>92.35</td></tr>
+<tr><td>Балка перед лестницей</td><td class='n'>1.8 м²</td><td class='n'>3.60</td><td class='n'>3.60</td><td class='n'>3.60</td><td class='n'>3.60</td></tr>
+<tr><td>Узкий коридор 1 этаж</td><td class='n'>27.44 м²</td><td class='n'>67.18</td><td class='n'>67.18</td><td class='n'>83.98</td><td class='n'>100.77</td></tr>
+<tr><td>Узкий коридор 1 этаж балка</td><td class='n'>1.48 м²</td><td class='n'>2.96</td><td class='n'>2.96</td><td class='n'>2.96</td><td class='n'>2.96</td></tr>
+<tr><td>Узкий кор. 1 эт. - тамбур кух.</td><td class='n'>11.43 м²</td><td class='n'>24.35</td><td class='n'>24.35</td><td class='n'>30.44</td><td class='n'>36.53</td></tr>
+<tr><td>Тамбур главный</td><td class='n'>13.85 м²</td><td class='n'>30.75</td><td class='n'>30.75</td><td class='n'>38.44</td><td class='n'>46.13</td></tr>
+<tr><td>Балка столовая</td><td class='n'>3.13 м²</td><td class='n'>6.27</td><td class='n'>6.27</td><td class='n'>6.27</td><td class='n'>6.27</td></tr>
+<tr><td>Наташин кабинет</td><td class='n'>9.24 м²</td><td class='n'>18.48</td><td class='n'>18.48</td><td class='n'>23.09</td><td class='n'>27.71</td></tr>
+<tr><td>Кухня</td><td class='n'>11.5 м²</td><td class='n'>34.50</td><td class='n'>34.50</td><td class='n'>43.12</td><td class='n'>51.75</td></tr>
+<tr><td>Прачечная 1эт.</td><td class='n'>22.37 м²</td><td class='n'>22.37</td><td class='n'>44.73</td><td class='n'>55.92</td><td class='n'>67.10</td></tr>
+<tr><td>Холл перед столовой</td><td class='n'>25.4 м²</td><td class='n'>54.35</td><td class='n'>54.35</td><td class='n'>67.94</td><td class='n'>81.52</td></tr>
+<tr><td>Столовая-стены</td><td class='n'>12.88 м²</td><td class='n'>25.75</td><td class='n'>25.75</td><td class='n'>32.19</td><td class='n'>38.63</td></tr>
+<tr><td>Столовая-откосы</td><td class='n'>5.78 м²</td><td class='n'>17.32</td><td class='n'>17.33</td><td class='n'>21.66</td><td class='n'>25.99</td></tr>
+<tr class='total'><td>ИТОГО</td><td></td><td class='n'>1,223.80</td><td class='n'>1,381.69</td><td class='n'>1,722.88</td><td class='n'>2,064.06</td></tr></table></div>
 <h2>Платежи и курс BYN→USD</h2><div class="wrap"><table><tr><th>Дата</th><th class="n">Сумма, BYN</th><th class="n">Курс НБРБ</th><th class="n">Сумма, USD</th></tr>
 <tr><td>22.10.2024</td><td class='n'>3,000.00</td><td class='n'>3.2891</td><td class='n'>912.10</td></tr>
 <tr><td>01.11.2024</td><td class='n'>3,000.00</td><td class='n'>3.3162</td><td class='n'>904.65</td></tr>
